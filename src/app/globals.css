@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .form-container {
+    @apply w-full max-w-3xl mx-auto;
+  }
+  .input-wrapper {
+    @apply flex flex-col gap-2 mb-4;
+  }
+  .input {
+    @apply p-3 outline-0 border border-zinc-500 rounded-sm;
+  }
+  .btn {
+    @apply min-w-24 py-2 px-4 bg-blue-400 font-bold rounded-sm hover:bg-blue-500 transition cursor-pointer text-center;
+  }
+  .btn.red {
+    @apply bg-red-400  hover:bg-red-500;
+  }
+}
